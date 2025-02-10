@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import aboutPhoto from "../assets/images/about.jpg";
 
 const Sidebar = ({ isOpen, setIsOpen, activeSection }) => {
   return (
@@ -7,7 +8,6 @@ const Sidebar = ({ isOpen, setIsOpen, activeSection }) => {
       ${isOpen ? "translate-x-0 w-full" : "-translate-x-full w-72"}  
       md:w-72 md:translate-x-0 md:relative md:flex md:flex-col`}
     >
-      {/* Close Button for Mobile */}
       <button
         className="absolute top-4 right-4 md:hidden text-white text-2xl"
         onClick={() => setIsOpen(false)}
@@ -15,17 +15,15 @@ const Sidebar = ({ isOpen, setIsOpen, activeSection }) => {
         ✕
       </button>
 
-      {/* Profile Info */}
       <div className="text-center mb-6">
         <div
           className="w-24 h-24 mx-auto rounded-full bg-cover bg-center"
-          style={{ backgroundImage: `url('/your-photo.jpg')` }}
+          style={{ backgroundImage: `url(${aboutPhoto})` }}
         />
         <h1 className="mt-4 text-xl font-semibold">Kulcsár Zsolt</h1>
         <span className="text-sm text-gray-400">.NET Developer</span>
       </div>
 
-      {/* Navigation */}
       <nav className="items-center">
         <ul className="space-y-4">
           {[
@@ -56,7 +54,6 @@ const Sidebar = ({ isOpen, setIsOpen, activeSection }) => {
         </ul>
       </nav>
 
-      {/* Footer */}
       <div className="mt-auto pt-6 text-center text-sm text-gray-400">
         <p>© {new Date().getFullYear()} All Rights Reserved</p>
         <div className="flex justify-center space-x-4 mt-2">
