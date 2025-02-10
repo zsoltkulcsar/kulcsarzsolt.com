@@ -1,14 +1,12 @@
-import { useState } from "react";
+import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 
-function App() {
-  const [isOpen, setIsOpen] = useState(false);
-
+const App = () => {
   return (
-    <div className="App">
-      <Home isOpen={isOpen} setIsOpen={setIsOpen} />
-    </div>
+    <Routes>
+      <Route path="/" element={<Home />} />
+    </Routes>
   );
-}
+};
 
 export default App;
