@@ -6,6 +6,7 @@ import {
   CheckCircleIcon,
   DocumentTextIcon,
 } from "@heroicons/react/solid";
+import Card from "./components/Card";
 
 const AboutSection = () => {
   return (
@@ -32,89 +33,49 @@ const AboutSection = () => {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mb-16 max-w-[1100px] mx-auto">
-        <div className="bg-gray-100 p-8 rounded-lg shadow-lg transition-all duration-300 hover:scale-105">
-          <div className="mb-4">
-            <CodeIcon className="w-12 h-12 text-blue-600 mx-auto" />
-          </div>
-          <h3 className="text-lg font-semibold text-gray-800 text-left">
-            Frontend Development (React)
-          </h3>
-          <p className="text-sm text-gray-600 mt-2">
-            Creating dynamic, responsive, and engaging user interfaces using
-            React.js, leveraging the power of React Hooks, JSX, and Redux for
-            state management.
-          </p>
-        </div>
-
-        <div className="bg-gray-100 p-8 rounded-lg shadow-lg transition-all duration-300 hover:scale-105">
-          <div className="mb-4">
-            <ServerIcon className="w-12 h-12 text-green-600 mx-auto" />
-          </div>
-          <h3 className="text-lg font-semibold text-gray-800 text-left">
-            Backend Development (.NET)
-          </h3>
-          <p className="text-sm text-gray-600 mt-2">
-            Building robust, scalable APIs and server-side applications using
-            .NET Core, with an emphasis on clean architecture and best practices
-            for maintainability.
-          </p>
-        </div>
-
-        <div className="bg-gray-100 p-8 rounded-lg shadow-lg transition-all duration-300 hover:scale-105">
-          <div className="mb-4">
-            <DatabaseIcon className="w-12 h-12 text-red-600 mx-auto" />
-          </div>
-          <h3 className="text-lg font-semibold text-gray-800 text-left">
-            Database Management
-          </h3>
-          <p className="text-sm text-gray-600 mt-2">
-            Working with SQL and NoSQL databases, designing efficient schemas,
-            optimizing queries, and ensuring data integrity for high-performance
-            applications.
-          </p>
-        </div>
-
-        <div className="bg-gray-100 p-8 rounded-lg shadow-lg transition-all duration-300 hover:scale-105">
-          <div className="mb-4">
-            <DocumentTextIcon className="w-12 h-12 text-teal-600 mx-auto" />
-          </div>
-          <h3 className="text-lg font-semibold text-gray-800 text-left">
-            API Integration
-          </h3>
-          <p className="text-sm text-gray-600 mt-2">
-            Building and integrating RESTful APIs and third-party services to
-            enhance the functionality of web applications, ensuring seamless
-            communication across systems.
-          </p>
-        </div>
-
-        <div className="bg-gray-100 p-8 rounded-lg shadow-lg transition-all duration-300 hover:scale-105">
-          <div className="mb-4">
-            <CloudIcon className="w-12 h-12 text-orange-600 mx-auto" />
-          </div>
-          <h3 className="text-lg font-semibold text-gray-800 text-left">
-            Cloud Solutions
-          </h3>
-          <p className="text-sm text-gray-600 mt-2">
-            Deploying web applications on cloud platforms like AWS, Azure, and
-            Google Cloud, ensuring scalability, security, and high availability.
-          </p>
-        </div>
-
-        <div className="bg-gray-100 p-8 rounded-lg shadow-lg transition-all duration-300 hover:scale-105">
-          <div className="mb-4">
-            <CheckCircleIcon className="w-12 h-12 text-yellow-600 mx-auto" />
-          </div>
-          <h3 className="text-lg font-semibold text-gray-800 text-left">
-            Testing & Debugging
-          </h3>
-          <p className="text-sm text-gray-600 mt-2">
-            Ensuring application quality through unit testing, integration
-            testing, and debugging using tools like Jest, Mocha, and the .NET
-            testing framework.
-          </p>
-        </div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-8 mb-16 max-w-[1100px] mx-auto">
+        <Card
+          Icon={CodeIcon}
+          title="Frontend Development (React)"
+          description="Creating dynamic, responsive, and engaging user interfaces using React.js, leveraging the power of React Hooks, JSX, and Redux for state management."
+          iconColor="blue-600"
+          bgColor="gray-100"
+        />
+        <Card
+          Icon={ServerIcon}
+          title="Backend Development (.NET)"
+          description="Building robust, scalable APIs and server-side applications using .NET Core, with an emphasis on clean architecture and best practices for maintainability."
+          iconColor="green-600"
+          bgColor="gray-100"
+        />
+        <Card
+          Icon={DatabaseIcon}
+          title="Database Management"
+          description="Working with SQL and NoSQL databases, designing efficient schemas, optimizing queries, and ensuring data integrity for high-performance applications."
+          iconColor="red-600"
+          bgColor="gray-100"
+        />
+        <Card
+          Icon={DocumentTextIcon}
+          title="API Integration"
+          description="Building and integrating RESTful APIs and third-party services to enhance the functionality of web applications, ensuring seamless communication across systems."
+          iconColor="teal-600"
+          bgColor="gray-100"
+        />
+        <Card
+          Icon={CloudIcon}
+          title="Cloud Solutions"
+          description="Deploying web applications on cloud platforms like AWS, Azure, and Google Cloud, ensuring scalability, security, and high availability."
+          iconColor="orange-600"
+          bgColor="gray-100"
+        />
+        <Card
+          Icon={CheckCircleIcon}
+          title="Testing & Debugging"
+          description="Ensuring application quality through unit testing, integration testing, and debugging using tools like Jest, Mocha, and the .NET testing framework."
+          iconColor="yellow-600"
+          bgColor="gray-100"
+        />
       </div>
     </section>
   );
