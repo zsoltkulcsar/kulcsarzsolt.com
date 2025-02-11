@@ -1,54 +1,54 @@
 import { useState } from "react";
-import { FaGithub, FaExternalLinkAlt } from "react-icons/fa"; // Import specific icons
+import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
+import financeImage from "./assets/images/finance.png";
+import pinterioImage from "./assets/images/pinterio.png";
+import shop from "./assets/images/shop.png";
+import togglTrack from "./assets/images/togglTrack.png";
 
 const projects = [
   {
-    title: "Project One",
-    description: "A short description of project one.",
-    tech: ["React", "Tailwind", "Node.js"],
-    github: "https://github.com/username/project1",
-    external: "https://project1.com",
-    preview: "asd", // Preview image or URL
+    title: " Cloud-Native E-Commerce Solution",
+    description:
+      "This project was based on cloud-native microservices architecture, mainly for educational purposes. This project was also beneficial for practicing diferrent architectures like Domain-Driven-Design and Clean Architecture, following SOLID and Clean code principles.",
+    tech: ["ASP.NET", "gRPC", "MediatR", "Docker", "RabbitMQ, Redis, Yarp"],
+    github: "",
+    external: "",
+    preview: shop,
   },
   {
-    title: "Project Two",
+    title: "Printerio",
     description: "A short description of project two.",
     tech: ["Vue", "Tailwind", "Express"],
-    github: "https://github.com/username/project2",
-    external: "https://project2.com",
-    preview: "sad", // Preview image or URL
+    github: "",
+    external: "",
+    preview: pinterioImage,
   },
   {
-    title: "Project Three",
-    description: "A short description of project three.",
-    tech: ["Angular", "Tailwind", "Firebase"],
-    github: "https://github.com/username/project3",
-    external: "https://project3.com",
-    preview: "sad", // Preview image or URL
+    title: "Personal Finance Management System",
+    description:
+      "This project focuses on building scalable, resilient microservices using .NET and AWS, incorporating key patterns like CQRS, Service Discovery, and Event Sourcing. It covers various architectures, including serverless and containerized microservices, and includes hands-on experience with Docker, RabbitMQ, and Apache Kafka.",
+    tech: [
+      "ASP.NET 8",
+      "AWS Cognito",
+      "AWS ECS (Fargate & EC2)",
+      "Docker",
+      "RabbitMQ",
+      "Apache Kafka",
+      "Event Bus",
+      "AWS CloudMap",
+    ],
+    github: "",
+    external: "",
+    preview: financeImage,
   },
   {
-    title: "Project Four",
-    description: "A short description of project four.",
-    tech: ["Svelte", "Tailwind", "GraphQL"],
-    github: "https://github.com/username/project4",
-    external: "https://project4.com",
-    preview: "https://via.placeholder.com/150", // Preview image or URL
-  },
-  {
-    title: "Project Five",
-    description: "A short description of project five.",
-    tech: ["Next.js", "Tailwind", "MongoDB"],
-    github: "https://github.com/username/project5",
-    external: "https://project5.com",
-    preview: "https://via.placeholder.com/150", // Preview image or URL
-  },
-  {
-    title: "Project Six",
-    description: "A short description of project six.",
-    tech: ["React", "Tailwind", "MySQL"],
-    github: "https://github.com/username/project6",
-    external: "https://project6.com",
-    preview: "https://via.placeholder.com/150", // Preview image or URL
+    title: "TooglTrack Clone",
+    description:
+      "I started to use Toogle Track. I find it usefull but it lacks some good features, and a huge chunk is pay-to-win. So I decided that I develop my own version that I can tailor to my preferences.",
+    tech: ["React", ".Net", "GraphQL"],
+    github: "",
+    external: "",
+    preview: togglTrack,
   },
 ];
 
@@ -59,18 +59,22 @@ const ProjectsSection = () => {
   const projectsToShow = showMore ? projects : projects.slice(0, GRID_LIMIT);
 
   return (
-    <section className="bg-gray-100 py-10">
-      <h2 className="text-4xl font-extrabold text-center mb-10">Projects</h2>
+    <section className="bg-white py-10">
+      <div className="text-left mb-16">
+        <span className="text-sm text-gray-600">Other Activities</span>
+        <h2 className="text-4xl font-extrabold text-gray-800 mt-4">
+          Personal Projects
+        </h2>
+      </div>
 
       <div className="space-y-8">
         {projectsToShow.map((project, index) => (
           <div
             key={index}
-            className="bg-white p-6 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300"
+            className="bg-gray-100  p-6 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300"
           >
             <div className="flex flex-col sm:flex-row items-start space-x-4">
               <div className="sm:w-1/3 h-auto flex-shrink-0">
-                {/* Preview Image with 30% size */}
                 {project.preview && (
                   <img
                     src={project.preview}
@@ -107,9 +111,9 @@ const ProjectsSection = () => {
                     )}
                   </div>
                 </div>
-                {/* Description */}
-                <p className="text-gray-700 mt-3">{project.description}</p>
-                {/* Tech Stack */}
+                <p className="text-gray-700 mt-3 text-justify">
+                  {project.description}
+                </p>
                 <div className="mt-3">
                   <ul className="flex flex-wrap gap-2">
                     {project.tech.map((tech, index) => (
@@ -128,7 +132,6 @@ const ProjectsSection = () => {
         ))}
       </div>
 
-      {/* Show More Button */}
       <div className="flex justify-center mt-10">
         <button
           onClick={() => setShowMore(!showMore)}

@@ -35,7 +35,7 @@ const skillsData = [
         level: 70,
       },
       {
-        name: "FluentValidation",
+        name: "Fluent Validation",
         icon: <DesktopComputerIcon className="w-6 h-6" />,
         level: 70,
       },
@@ -84,7 +84,14 @@ const skillsData = [
         level: 85,
       },
 
-      { name: "AWS", icon: <CloudIcon className="w-6 h-6" />, level: 75 },
+      { name: "AWS", icon: <CloudIcon className="w-6 h-6" />, level: 45 },
+      { name: "Azure", icon: <CloudIcon className="w-6 h-6" />, level: 65 },
+      { name: "RabbitMQ", icon: <CloudIcon className="w-6 h-6" />, level: 55 },
+      {
+        name: "Apache Kafka",
+        icon: <CloudIcon className="w-6 h-6" />,
+        level: 35,
+      },
     ],
   },
   {
@@ -108,6 +115,7 @@ const skillsData = [
         icon: <ServerIcon className="w-6 h-6" />,
         level: 65,
       },
+      { name: "Redis", icon: <ServerIcon className="w-6 h-6" />, level: 65 },
     ],
   },
 ];
@@ -126,7 +134,7 @@ const SkillsSection = () => {
         <div className="space-y-8">
           {skillsData.map((category, index) => (
             <div key={index}>
-              <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-4">
+              <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-100 mb-4">
                 {category.category}
               </h3>
 
@@ -141,7 +149,7 @@ const SkillsSection = () => {
                       {skill.name}
                     </h4>
 
-                    <div className="mt-2 w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+                    <div className="mt-2 w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700 overflow-hidden">
                       <div
                         className="bg-indigo-600 h-2.5 rounded-full"
                         style={{ width: `${skill.level}%` }}

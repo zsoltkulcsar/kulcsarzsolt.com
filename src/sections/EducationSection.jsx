@@ -19,13 +19,15 @@ const EducationSection = () => {
             "Technical University of Cluj Napoca - Automation and Applied Informatics",
           year: "2019 - 2023",
           description: [
-            "2029 – 2023 TECHNICAL UNIVERSITY OF CLUJ – NAPOCA Faculty of Automation and Computer Science Domain: Automation and Applied Informatics",
+            "Lorem ipsum odor amet, consectetuer adipiscing elit. Libero turpis porta aliquam dui malesuada cursus ante curabitur. Pulvinar efficitur velit venenatis turpis commodo venenatis morbi at maecenas. Ante ligula nisl rutrum donec montes venenatis. Hendrerit nec non ad dolor, rutrum libero ante.",
           ],
         },
         {
-          title: "Budapest Theological Academy - Hitoktató(?)",
+          title: "Budapest Theological Academy",
           year: "2020 - 2024",
-          description: ["Lorem ipsum dolores"],
+          description: [
+            "Lorem ipsum odor amet, consectetuer adipiscing elit. Iaculis elementum et arcu; a eget dui. Montes enim per primis maximus in sapien bibendum potenti. Malesuada sit placerat est nam tristique mi est aptent. Maximus ridiculus lobortis ridiculus vitae viverra blandit. Vehicula elementum aptent; eget convallis lobortis egestas. Leo hendrerit primis; nulla tempor ultrices nascetur venenatis dictumst. Ac mattis condimentum molestie sem tortor tempus dapibus praesent. Malesuada est molestie magnis potenti vehicula iaculis. Finibus nunc eget feugiat risus fusce dapibus per class.",
+          ],
         },
       ],
     },
@@ -43,7 +45,7 @@ const EducationSection = () => {
         {
           title:
             "Design Microservices Architectures With Patterns & Principles",
-          description: ["majd egy link"],
+          description: ["Udemy course"],
         },
       ],
     },

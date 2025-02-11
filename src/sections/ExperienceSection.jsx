@@ -13,7 +13,6 @@ const experienceData = [
     description: [
       "Started working on a blog to assist the Hungarian Youth Community in Romania, focusing on providing resources in Hungarian.",
       "Leading a team of a few people to make the project successful while enhancing my management skills.",
-      "Began courses on React and Cloud Engineering to gain a better understanding of the entire process.",
     ],
     time: "2024 August – Present",
     icon: <FaBlog />,
@@ -24,8 +23,9 @@ const experienceData = [
     company: "IT Perspectives",
     description: [
       "Actively participated in an agile development environment, contributing to sprint planning, daily stand-ups, retrospectives, and sprint reviews.",
-      "Contributed to architectural design, technology selection, user management, and unit testing.",
-      "Played a pivotal role in the migration of legacy systems to .NET Core, utilizing MediatR and CQRS patterns to improve maintainability and performance.",
+      "Played a pivotal role in migration of a legacy system to .NET Core,implementing MediatR and CQRS, resulting increase in maintainability and performance.",
+      "Contributed in architectural and technology selection for a new project. Led efforts in user management, unit testing, enhancing security measure with AlwaysEncrypted, strengthening data integrity and confidentiality.",
+      " Gained hands-on experience with frontend development, working mostly with React but some other technologies as well.",
     ],
     time: "Aug 2022 – Feb 2025",
     icon: <FaBriefcase />,
@@ -36,7 +36,7 @@ const experienceData = [
     company: "It Perspectives",
     description: [
       "During this time, I implemented the back-end of a library management system using .NET and MVC.",
-      "Gained insights into various development processes.",
+      "Gained insights into various development processes, completing courses on development, working with a great mentor to adapt to a professional context",
     ],
     time: "Jun 2022 – Aug 2022",
     icon: <FaLaptopCode />,
