@@ -9,23 +9,21 @@ const HomeSection = () => {
           <h2 className="text-2xl mb-6 text-gray-600 opacity-90">
             Passionate Software Developer & Problem Solver
           </h2>
-          <p className="text-lg mb-8 text-gray-600 opacity-75">
-            I create impactful digital solutions through code. Let’s make
-            something amazing together.
-          </p>
-
-          <div className="space-x-6 sm:block sm:space-x-0 sm:space-y-4 sm:w-full">
+          <div className="flex flex-col md:flex-row md:space-x-6 space-y-4 md:space-y-0 md:w-full justify-center">
             <a
-              href="#portfolio"
-              className="inline-block bg-blue-600 text-white py-3 px-8 rounded-lg text-lg font-semibold hover:bg-blue-700 transition-all duration-300 transform hover:scale-105 sm:w-full sm:text-center"
+              href="https://github.com/zsoltkulcsar"
+              target="_blank"
+              className="inline-block bg-blue-600 text-white py-3 px-8 rounded-lg text-lg font-semibold hover:bg-blue-700 transition-all duration-300 transform hover:scale-105 md:w-full"
             >
               View Portfolio
             </a>
             <a
-              href="#cv"
-              className="inline-block bg-gray-800 text-white py-3 px-8 rounded-lg text-lg font-semibold hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 sm:w-full sm:text-center"
+              href="https://drive.google.com/file/d/1jpeWiSV63Qe1lLzMtobfN5cthdvuLeMu/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-gray-800 text-white py-3 px-8 rounded-lg text-lg font-semibold hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 md:w-full"
             >
-              Download CV
+              View CV
             </a>
           </div>
         </div>
