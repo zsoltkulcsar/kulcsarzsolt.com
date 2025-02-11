@@ -134,7 +134,7 @@ const SkillsSection = () => {
         <div className="space-y-8">
           {skillsData.map((category, index) => (
             <div key={index}>
-              <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-100 mb-4">
+              <h3 className="text-xl font-semibold text-black-800  mb-4">
                 {category.category}
               </h3>
 
@@ -142,14 +142,14 @@ const SkillsSection = () => {
                 {category.skills.map((skill, idx) => (
                   <div
                     key={idx}
-                    className="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md hover:scale-105 transform transition duration-300"
+                    className="bg-white p-4 rounded-lg shadow-md hover:scale-105 transform transition duration-300"
                   >
                     <div className="flex justify-center mb-2">{skill.icon}</div>
-                    <h4 className="text-lg text-center font-medium text-gray-800 dark:text-white">
+                    <h4 className="text-lg text-center font-medium text-gray-800">
                       {skill.name}
                     </h4>
 
-                    <div className="mt-2 w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700 overflow-hidden">
+                    <div className="mt-2 w-full bg-gray-200 rounded-full h-2.5 overflow-hidden">
                       <div
                         className="bg-indigo-600 h-2.5 rounded-full"
                         style={{ width: `${skill.level}%` }}
