@@ -24,7 +24,7 @@ const Sidebar = ({ isOpen, setIsOpen, activeSection }) => {
         <span className="text-sm text-gray-400">.NET Developer</span>
       </div>
 
-      <nav className="items-center">
+      <nav className="items-center z-50">
         <ul className="space-y-4">
           {[
             "home",

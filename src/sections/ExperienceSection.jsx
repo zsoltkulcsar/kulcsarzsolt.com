@@ -46,19 +46,17 @@ const experienceData = [
 
 const ExperienceSection = () => {
   return (
-    <section id="experience" className="py-16 bg-gray-100">
-      <div className="max-w-4xl mx-auto">
-        <div className="text-left mb-16">
-          <span className="text-sm text-gray-600">Working Experience</span>
-          <h2 className="text-4xl font-extrabold text-gray-800 mt-4">
-            Experience
-          </h2>
-        </div>
-
-        <VerticalTimeline>
+    <section id="experience" className="bg-white px-8 py-16">
+      <div className="text-left mb-16">
+        <span className="text-sm text-gray-600">Working Experience</span>
+        <h2 className="text-4xl font-extrabold text-gray-800 mt-4">
+          Experience
+        </h2>
+      </div>
+      <div>
+        <VerticalTimeline className="relative z-10">
           {experienceData.map((experience, index) => (
             <VerticalTimelineElement
-              className="bg-red"
               key={index}
               date={experience.time}
               iconStyle={{
@@ -68,8 +66,12 @@ const ExperienceSection = () => {
                 justifyContent: "center",
                 alignItems: "center",
                 padding: "20px",
+                zIndex: 1,
               }}
               icon={<div className=" w-12 h-12">{experience.icon}</div>}
+              contentStyle={{
+                zIndex: 1,
+              }}
             >
               <div className="mb-3">
                 <h3 className="text-xl font-semibold text-gray-800">

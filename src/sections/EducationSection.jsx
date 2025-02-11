@@ -50,54 +50,52 @@ const EducationSection = () => {
   ];
 
   return (
-    <section className="bg-white py-12" id="education">
-      <div className="max-w-7xl mx-auto px-4">
-        <div className="text-left mb-16">
-          <span className="text-sm text-gray-600">My Education</span>
-          <h2 className="text-4xl font-extrabold text-gray-800 mt-4">
-            Education & Certificates
-          </h2>
-        </div>
+    <section id="education" className="bg-white px-8 py-16">
+      <div className="text-left mb-16">
+        <span className="text-sm text-gray-600">My Education</span>
+        <h2 className="text-4xl font-extrabold text-gray-800 mt-4">
+          Education & Certificates
+        </h2>
+      </div>
 
-        <div>
-          {educationAndCertificatesData.map((category, categoryIndex) => (
-            <div key={categoryIndex} className="mb-8">
-              <div className="mb-4">
-                <h3 className="text-2xl font-semibold text-gray-700">
-                  {category.category}
-                </h3>
-              </div>
-              {category.items.map((item, index) => (
-                <div key={index} className="mb-4">
-                  <div className="bg-white shadow-md rounded-lg overflow-hidden">
-                    <button
-                      className="w-full px-6 py-4 text-left font-semibold text-gray-800 bg-gray-200 hover:bg-gray-300 focus:outline-none"
-                      onClick={() => toggleAccordion(category.category, index)} // Pass category and index
-                    >
-                      <div className="flex justify-between items-center">
-                        <span>{item.title}</span>
-                        {item.year && (
-                          <span className="text-sm text-gray-600">
-                            {item.year}
-                          </span>
-                        )}
-                      </div>
-                    </button>
-                    <div
-                      className={`${
-                        openIndex[category.category] === index
-                          ? "block"
-                          : "hidden"
-                      } px-6 py-4 text-gray-700 bg-gray-50`}
-                    >
-                      <p>{item.description.join(", ")}</p>
+      <div>
+        {educationAndCertificatesData.map((category, categoryIndex) => (
+          <div key={categoryIndex} className="mb-8">
+            <div className="mb-4">
+              <h3 className="text-2xl font-semibold text-gray-700">
+                {category.category}
+              </h3>
+            </div>
+            {category.items.map((item, index) => (
+              <div key={index} className="mb-4">
+                <div className="bg-white shadow-md rounded-lg overflow-hidden">
+                  <button
+                    className="w-full px-6 py-4 text-left font-semibold text-gray-800 bg-gray-200 hover:bg-gray-300 focus:outline-none"
+                    onClick={() => toggleAccordion(category.category, index)} // Pass category and index
+                  >
+                    <div className="flex justify-between items-center">
+                      <span>{item.title}</span>
+                      {item.year && (
+                        <span className="text-sm text-gray-600">
+                          {item.year}
+                        </span>
+                      )}
                     </div>
+                  </button>
+                  <div
+                    className={`${
+                      openIndex[category.category] === index
+                        ? "block"
+                        : "hidden"
+                    } px-6 py-4 text-gray-700 bg-gray-50`}
+                  >
+                    <p>{item.description.join(", ")}</p>
                   </div>
                 </div>
-              ))}
-            </div>
-          ))}
-        </div>
+              </div>
+            ))}
+          </div>
+        ))}
       </div>
     </section>
   );
